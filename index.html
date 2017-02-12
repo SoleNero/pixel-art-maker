@@ -1,46 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PixelArt</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
 
-<head>
-  <title>PixelArt</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD"
-    crossorigin="anonymous">
-    <link href="css/style.css" rel="stylesheet">
-    <script src="js/main.js" defer></script>
-</head>
+  <body>
+  <main id="container">
+    <div class="row">
+        <h1 style="text-align: center">Pixel Art Board</h1>
+      <div id="canvas">
 
-<body class ="flex-container">
+      </div>
+    </div>
 
-  <heading class="pure-u-5-5">
-    <h1>PixelArt!</h1>
-  </heading>
-
-
-  <main>
-    <!--table-->
-    <table class="pure-table pure-table-bordered">
-      <tbody>
-        <tr>
-        </tr>
-      </tbody>
-    </table>
-
-<!--colors boxes-->
-<div class="pure-g color-list">
-  <div id="red" class="pure-u-1-2 color"></div>
-  <div id="black" class="pure-u-1-2 color"></div>
-  <div id="blue" class="pure-u-1-2 color"></div>
-  <div id="yellow" class="pure-u-1-2 color"></div>
-  <div id="orange" class="pure-u-1-2 color"></div>
-  <div id="green" class="pure-u-1-2 color"></div>
-  <div id="purple" class="pure-u-1-2 color"></div>
-  <div id="pink" class="pure-u-1-2 color"></div>
-  <div id="brown" class="pure-u-1-2 color"></div>
-  <div id="gray" class="pure-u-1-2 color"></div>
-</div>
-
+    <div class="row">
+      <div id="toolbar">
+        <!-- dynamic content-->
+      </div>
+    </div>
+    <!--<div class="row">
+      <div class="buttons">
+        <button onclick="addRow()" id="addRow">Add rows</button>
+        <button onclick="reset()" id="resetCanvas">Reset</button>
+      </div>
+      <div class="buttons">
+        <button id="currentColor">Current Color</button>
+      </div>
+    </div>-->
   </main>
-</body>
+  <script type="text/javascript" src="js/main.js"></script>
+  </body>
 </html>

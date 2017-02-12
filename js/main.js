@@ -1,38 +1,34 @@
 'use strict';
-window.onload = function () {
 
-//create table
-  let table = document.getElementsByClassName('pure-table');
-  let tbody = document.querySelector('tbody');
+var paint = "blue";
+var main = document.querySelector('#canvas');
+var toolBar = document.querySelector('#toolbar');
+var pixelCount = 0;
+var drawing = true;
 
-  let tr = document.querySelector('tr');
-  let td = document.createElement('td');
-  tr.appendChild(td);
 
-//boxes
-(function rowsBoxes(){
-   for(let i=0; i<21; i++){
-      let secBox = td.cloneNode(true);
-        tr.appendChild(secBox); 
-     } 
-    for(let j=0; j<21; j++){
-      let secRow = tr.cloneNode(true);
-        tbody.appendChild(secRow);
-    } 
+// creates canvas
+(function canvasInit() {
+  for ( var i = 0; i < 3000; i++) {
+    var pixel = document.createElement('div');
+    var id = `px ${pixelCount}`;
+    pixel.setAttribute('class', 'pixel');
+    pixel.id = id;
+    main.appendChild(pixel);
+    pixelCount++;
+  }
 }());
 
-//colors
-  let color = document.querySelectorAll('div.color');
-  console.log(color);
+//creates colors
+(function(){
+  var colors = "black,blue,green,purple,red,orange,yellow";
+  var colorArr = colors.split(",");
+  for(var i=0; i<colorArr.length; i++){
+    var colorButton = document.createElement('div');
+    colorButton.setAttribute('class', 'colorButton');
+    colorButton.style.backgroundColor = colorArr[i];
+    toolBar.appendChild(colorButton);
+  }
+}());
 
-  
 
-
-
-
-
-
-
-
-  
-};

@@ -1,58 +1,43 @@
-body {
-  display:flex;  
-  padding: 20px 20px;
-  flex-flow: row wrap;
-  justify-content: center;
+* {
+  box-sizing: border-box;
 }
 
-h1 {
+#container {
+  margin: auto;
+}
+
+.row {
+  width: 100%;
+  padding: 10px 0;
+  margin: auto;
+}
+
+#canvas {
+  width: 750px;
+  margin: auto;
   display: flex;
-  justify-content: center;
+  flex-flow: row wrap;
 }
 
-.pure-table td {
-  height: 4px;
-  width: 4px;
-  cursor: pointer;
+.pixel{
+  width: 10px;
+  height: 10px;
+  border: black 1px solid;
 }
 
-.color {
-  height: 20px;
-  width: 20px;
-  border: black solid 1px;
+#toolbar {
+  height: 100px;
+  width: 750px;
+  padding:20px;
+  margin: auto;
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.colorButton{
+  width: 50px;
+  height: 50px;
   border-radius: 100%;
-  margin-top: 20px;
-  margin-left:5px;
   cursor: pointer;
-}
-
-#red {
-  background-color: red;
-}
-#black{
-  background-color: black;
-}
-#blue{
-  background-color: blue;
-}
-#yellow{
-  background-color: yellow;
-}
-#orange{
-  background-color: orange;
-}
-#green{
-  background-color: green;
-}
-#purple{
-  background-color: purple;
-}
-#pink{
-  background-color: pink;
-}
-#brown{
-  background-color: brown;
-}
-#gray{
-  background-color: grey;
 }
