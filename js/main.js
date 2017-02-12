@@ -20,7 +20,7 @@ var drawing = true;
 }());
 
 //creates colors
-(function(){
+(function color(){
   var colors = "black,blue,green,purple,red,orange,yellow";
   var colorArr = colors.split(",");
   for(var i=0; i<colorArr.length; i++){
@@ -30,5 +30,15 @@ var drawing = true;
     toolBar.appendChild(colorButton);
   }
 }());
+
+//choose color button
+
+function colorPick(ev){
+  var clickedColor = ev.target.style.backgroundColor;
+  paint = clickedColor;
+  document.querySelector('#currentColor').style.backgroundColor = clickedColor;
+}
+toolBar.addEventListener('mousedown', colorPick, true);
+
 
 
