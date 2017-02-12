@@ -47,6 +47,7 @@
   text-align: center;
 }
 
+#resetDrawing,
 #currentColor{
   width: 100px;
   margin:15px;

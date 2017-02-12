@@ -8,7 +8,7 @@ var drawing = true;
 
 
 // creates canvas
-(function canvasInit() {
+function canvasInit() {
   for ( var i = 0; i < 3000; i++) {
     var pixel = document.createElement('div');
     var id = `px ${pixelCount}`;
@@ -17,7 +17,8 @@ var drawing = true;
     main.appendChild(pixel);
     pixelCount++;
   }
-}());
+};
+canvasInit();
 
 //creates colors
 (function color(){
@@ -61,4 +62,12 @@ main.addEventListener('mousedown', function(ev){
 main.addEventListener('mouseup', function(){
   drawing = false;
 });
+
+//reset button
+function reset(){
+  do{
+    main.removeChild(main.firstChild);
+  }while(main.hasChildNodes());
+  canvasInit();
+}
 
