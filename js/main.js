@@ -33,12 +33,32 @@ var drawing = true;
 
 //choose color button
 
-function colorPick(ev){
+function colorPicker(ev){
   var clickedColor = ev.target.style.backgroundColor;
   paint = clickedColor;
   document.querySelector('#currentColor').style.backgroundColor = clickedColor;
 }
-toolBar.addEventListener('mousedown', colorPick, true);
+toolBar.addEventListener('click', colorPicker, true);
 
+//paint canvas
+function paintCanvas(ev){
+  var clickedPixel = ev.target;
+    if(ev.target !== ev.currentTarget){
+      if(drawing){
+        clickedPixel.style.borderColor = paint;
+        clickedPixel.style.backgroundColor = paint;
+      }
+    }
+}
 
+main.addEventListener('mousedown', function(ev){
+  drawing = true;
+  paintCanvas(ev);
+ main.addEventListener('mouseover', function(ev){
+    paintCanvas(ev);
+  });
+});
+main.addEventListener('mouseup', function(){
+  drawing = false;
+});
 

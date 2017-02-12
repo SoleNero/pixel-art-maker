@@ -42,8 +42,8 @@
   cursor: pointer;
 }
 
-.buttons {
-  margin: 0 auto;
+.btn {
+  margin: auto;
   text-align: center;
 }
 
@@ -54,4 +54,5 @@
   color: white;
   border: none;
   font-size:16px;
+  border-radius: 10%;
 }
